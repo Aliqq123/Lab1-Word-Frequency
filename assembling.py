@@ -6,11 +6,11 @@ from counting import countWords
 from print_endresult import printTopMost
 
 def read_text_lines(source):
-    if source.startswitch("http://") or source.starswitch("https://"):
+    if source.startswith("http://") or source.startswith("https://"):
         response = urllib.request.urlopen(source)
         return response.read().decode("utf8").splitlines()
     else:
-        with open(source, encoding="utf-8") as input-file:
+        with open(source, encoding="utf-8") as input_file:
             return input_file.readlines()
 
 def read_stop_words(path):
