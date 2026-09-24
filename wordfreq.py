@@ -35,9 +35,9 @@ def tokenize(lines):
                 words.append(line[start:end])
                 start = end    
 
-        words.low      
+    words = [word.lower() for word in words]
     return words
 
 
 
-print(tokenize(['10  sweet  apple  tarts.']))
+print(tokenize(['10  Sweet  apple  tarts.']))
