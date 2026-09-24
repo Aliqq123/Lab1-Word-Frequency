@@ -1,3 +1,6 @@
+from countWords import countWords
+from printTopMost import printTopMost
+
 
 def tokenize(lines):
     words = []

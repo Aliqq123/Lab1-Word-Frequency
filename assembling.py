@@ -2,8 +2,8 @@ import sys
 import urllib.request
 
 from wordfreq import tokenize
-from counting import countWords
-from print_endresult import printTopMost
+from countWords import countWords
+from printTopMost import printTopMost
 
 def read_text_lines(source):
     if source.startswith("http://") or source.startswith("https://"):
