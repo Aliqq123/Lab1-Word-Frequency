@@ -31,12 +31,8 @@ def tokenize(lines):
                 words.append(line[start:end])
                 start = end 
             else:
-                end = start 
-
-                while end < len(line) and not line[end].isdigit() and not line[end].isalpha() and not line[end].isspace():
-                    end = end + 1
-                words.append(line[start:end])
-                start = end    
+                words.append(line[start])
+                start += 1   
 
     words = [word.lower() for word in words]
     return words
