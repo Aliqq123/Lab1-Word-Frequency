@@ -5,6 +5,7 @@ from wordfreq import tokenize
 from countWords import countWords
 from printTopMost import printTopMost
 
+
 def read_text_lines(source):
     if source.startswith("http://") or source.startswith("https://"):
         response = urllib.request.urlopen(source)
@@ -29,4 +30,4 @@ def main():
     frequencies = countWords(words, stop_words)
     printTopMost(frequencies, top_n)  
 
-# main()     
+main()     

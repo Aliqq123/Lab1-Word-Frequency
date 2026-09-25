@@ -40,7 +40,3 @@ def tokenize(lines):
 
     words = [word.lower() for word in words]
     return words
-
-
-
-print(tokenize(['10  Sweet  apple  tarts.']))
