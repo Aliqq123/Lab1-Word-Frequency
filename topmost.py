@@ -1,5 +1,5 @@
-import sys
-import urllib.request
+import sys  #commando
+import urllib.request #webbadress, url
 
 from wordfreq import tokenize
 from countWords import countWords
@@ -12,10 +12,14 @@ def read_text_lines(source):
     else:
         with open(source, encoding="utf-8") as input_file:
             return input_file.readlines()
+#source= webb, check if file or webbadress
+#readlines, read whole file, string per line
 
 def read_stop_words(path):
     with open(path, encoding="utf-8") as input_file:
         return [line.strip() for line in input_file]
+#path, engstop, open file, auto close
+#list comprehension, strip varje rad, gather result
 
 def main():
     stop_words_path = sys.argv[1]
@@ -28,5 +32,11 @@ def main():
     words = tokenize(lines)
     frequencies = countWords(words, stop_words)
     printTopMost(frequencies, top_n)  
+#1= eng, 2= examples, 3= 20, text
+#lines, read file or webbadress, 
+#key is word and value is number
+#
+main()     
 
-# main()     
+
+#python3 topmost.py eng_stopwords.txt examples/article1.txt 20

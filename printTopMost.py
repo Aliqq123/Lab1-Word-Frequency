@@ -1,19 +1,19 @@
 def printTopMost(frequencies, n):
-    #Need to make dict to sequence, word, number
-    #items will return key value couple in dict
+  #Dict with frequency of word, word:freq, and how many words=n  
     items = frequencies.items()
-
-    #Sort pair, frequency, from -1
+#Makes dict to sequence, pair, (word:freq)
+    
     sorted_items = sorted(items, key=lambda pair: -pair[1])
-    #Only the first n, slicing :n, up to n
+    #Sorting and returning new list, key makes it after freq
+    #pair[0] word, pair[1]=n,-1 gives sorted falling
     top_items = sorted_items[:n]
-
-    #Adjusted, nice, printing
+    #from beginning t n , not n
+    
     for word, count in top_items:
-        #ljust to right, 20 tecken
+        #Lopp, word then count
         word_column = word.ljust(20)
+        #20 tecken to the right
         count_column = str(count).rjust(5)
-        #str, nuber->text
-        #rjust to lef , 5 tecken
+        #makes number to text, rjust string, to the left from right, 5 tecken
         print(word_column + count_column)
-        
+        #Makes it so word + count
