@@ -62,6 +62,7 @@ def countWords(words,stopWords):
             frequencies[word]=1
         else:
             frequencies[word] +=1
+
     return frequencies
 
 
@@ -84,4 +85,3 @@ def printTopMost(frequencies, n):
         #makes number to text, rjust string, to the left from right, 5 tecken
         print(word_column + count_column)
         #Makes it so word + counta
-            
