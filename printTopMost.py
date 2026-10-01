@@ -1,19 +1,24 @@
+# definierar funktionen. frequencies = en dictionary {ord: antal}, n = hur många ord som ska skrivas ut
 def printTopMost(frequencies, n):
-  #Dict with frequency of word, word:freq, and how many words=n  
+
     items = frequencies.items()
-#Makes dict to sequence, pair, (word:freq)
-    
+        # gör om dictionaryn till en sekvens av par, t.ex. ("the", 42)
+
     sorted_items = sorted(items, key=lambda pair: -pair[1])
-    #Sorting and returning new list, key makes it after freq
-    #pair[0] word, pair[1]=n,-1 gives sorted falling
+    # sorterar paren och returnerar en ny lista
+    # key=lambda: pair[0] är ordet, pair[1] är antalet
+    # minustecknet gör att det största antalet hamnar först (fallande ordning)
     top_items = sorted_items[:n]
-    #from beginning t n , not n
-    
+    # tar de n första paren i listan, alltså de n vanligaste orden
+
+
     for word, count in top_items:
-        #Lopp, word then count
+    # loopar igenom varje par och delar upp det i word (ordet) och count (antalet)
+
         word_column = word.ljust(20)
-        #20 tecken to the right
+        # fyller ut ordet med mellanslag till 20 tecken, vänsterjusterat
         count_column = str(count).rjust(5)
-        #makes number to text, rjust string, to the left from right, 5 tecken
+        # gör om antalet till text och högerjusterar det i 5 tecken
         print(word_column + count_column)
-        #Makes it so word + count
+        # skriver ut ordet och antalet på samma rad så att kolumnerna hamnar under varandra
+        
