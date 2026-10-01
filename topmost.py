@@ -2,8 +2,8 @@ import sys  #commando
 import urllib.request #webbadress, url
 
 from wordfreq import tokenize
-from countWords import countWords
-from printTopMost import printTopMost
+from wordfreq import countWords
+from wordfreq import printTopMost
 
 
 def read_text_lines(source):
@@ -34,4 +34,4 @@ def main():
     frequencies = countWords(words, stop_words)
     printTopMost(frequencies, top_n)  
 
-# main()     
+main()     
