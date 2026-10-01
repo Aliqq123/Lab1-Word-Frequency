@@ -34,4 +34,4 @@ def main():
     frequencies = countWords(words, stop_words)
     printTopMost(frequencies, top_n)  
 
-# main()     
+main()     
